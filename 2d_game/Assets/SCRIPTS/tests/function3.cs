@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class function1 : MonoBehaviour
+public class function3 : MonoBehaviour
 {
     int num1;
     int num2;
@@ -10,7 +10,7 @@ public class function1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CalcAdd(11,23);
+        CalcAdd(1,2);
     }
 
     int CalcAdd(int n1, int n2)
@@ -18,6 +18,7 @@ public class function1 : MonoBehaviour
         Debug.Log("Number 1 =" + n1 + "Number 2= " + n2);
         total =  n1+ n2;
 
+        
         Debug.Log(total);
         return total;
     }
