@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playercontrols : MonoBehaviour
+public class camerafollow : MonoBehaviour
 {
-
-  public float speed = 30;
+    public GameObject player;
+    private Vector3 offset = new Vector3(0,5,-7);
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,6 @@ public class Playercontrols : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      // this code makes the tanks move 
-        transform.Translate(Vector3.forward*Time.deltaTime * speed);
+        transform.position = player.transform.position + new Vector3(0,5,-7);
     }
 }
