@@ -10,7 +10,7 @@ public class PlayerControls : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform.position = new Vector3(-xrange, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
@@ -22,6 +22,9 @@ public class PlayerControls : MonoBehaviour
     }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * Speed);
+
+        if(input.GetKeyDown(Keycode.Space))
+        Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rot)
         
     }
 }
